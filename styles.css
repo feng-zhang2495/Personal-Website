@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 
 @font-face {
-    font-family: Brandon Grotesque Light;
+    font-family: "Brandon Grotesque Light";
     src: url(assets/fonts/brandon\ grotesque/brandon-grotesque-light-58a8a4b38001d.otf);
 }
 
@@ -44,6 +44,14 @@ h5 {
 
 h6 {
     font-size: 1rem;
+}
+
+p {
+    font-family: Inter;
+    color: #2A2932;
+    font-size: 0.8rem;
+    opacity: 0.75;
+    line-height: 1.4rem;
 }
 
 .flexbox {
@@ -131,8 +139,50 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
+    height: 90vh;
+    padding: 0 calc((320/1920)*100%);
 }
 
-.top-hero {
-    
+.top-hero > h3{
+    font-family: "Brandon Grotesque Light";
+    background: linear-gradient(to right, #3674C2, #463CB5); 
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
+}
+
+.mid-hero {
+    padding: 3vh 6vw;
+    margin: 3vh 0 0 0;
+}
+
+.bottom-hero {
+
+}
+
+.bottom-hero > button {
+    font-size: 0.512rem;
+    font-family: "Inter";
+    font-weight: 700;
+    color: white;
+    margin: 0 5vw;
+    background: linear-gradient(to right, #3674C2, #463CB5);
+    border: 0px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4vh;
+    height: 7vh;
+    width: calc((250/1920)*100vw);
+}
+
+#right-button {
+    width: calc((200/1920)*100vw)
+}
+
+.bottom-hero > button > svg{
+    fill: white;
+    height: 75%;
+    margin-left: 2%;
+    flex-basis: 33%;
 }
