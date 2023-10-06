@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+@font-face {
+    font-family: "Brandon Grotesque Light";
+    src: url(assets/fonts/brandon\ grotesque/brandon-grotesque-light-58a8a4b38001d.otf);
+}
+
 /* GLOBAL CSS */
 *, *:before, *::after {
     box-sizing: border-box;
@@ -6,7 +13,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 6px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -14,44 +21,168 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Brandon Grotesque";
 }
 
+/* MAJOR THIRD ASPECT RATIO 1.250 */ 
 h1 {
-    font-size: 2.488rem;
+    font-size: 3.052rem;
 }
 
 h2 {
-    font-size: 3.998rem;
+    font-size: 2.441rem;
 }
 
 h3 {
-    font-size: 2.827rem;
+    font-size: 1.953rem;
 }
 
 h4 {
-    font-size: 1.999rem;
+    font-size: 1.563rem;
 }
 
 h5 {
-    font-size: 1.414rem;
+    font-size: 1.25rem;
 }
 
 h6 {
     font-size: 1rem;
 }
 
+p {
+    font-family: Inter;
+    color: #2A2932;
+    font-size: 0.8rem;
+    opacity: 0.75;
+    line-height: 1.4rem;
+}
+
 .flexbox {
     display: flex;
 }
 
-body {
-    margin: 0 12%;
+a {
+    text-decoration: none;
+    cursor: pointer;
 }
+
+
+/* NAVAR CSS */
+#nav {
+    display: flex;
+    justify-content: center;
+    height: 8vh;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 3px;
+    align-items: center;
+    color: #2A2932;
+    padding: 0 12%;
+    box-shadow: 0px 0px 2px 0px rgba(42,41,50,0.27);
+}
+
+#nav > * {
+    flex-basis: calc(100%/3);
+    
+}
+
+#nav > .mid > *{
+    margin: 0 5%;
+}
+
+/* NAME */
+.first {
+    justify-content: flex-start;
+    font-size: 0.70rem;
+}
+
+.first > a {
+    background: linear-gradient(to right, #3674C2, #463CB5); 
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.first > *:hover {
+    transform: scale(1.02);
+}
+
+/* MIDDLE LINKS */
+.mid {
+    justify-content: center;
+}
+
+.mid > *:hover {
+    transform: scale(1.05);
+}
+
+/* ICONS */
+.end {
+    justify-content: right;
+    align-items: center;
+    height: 100%;
+}
+
+.end > img {
+    height: 50%;
+    width: auto;
+    flex-grow: 0;
+    cursor: pointer;
+}
+
+.end > *:hover {
+    height: 52%;
+}
+
+
+/* HERO SECTION CSS */
 .hero {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    height: 90vh;
+    padding: 0 calc((320/1920)*100%);
 }
 
-.top-hero {
-    
+.top-hero > h3{
+    font-family: "Brandon Grotesque Light";
+    background: linear-gradient(to right, #3674C2, #463CB5); 
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
+}
+
+.mid-hero {
+    padding: 3vh 6vw;
+    margin: 3vh 0 0 0;
+}
+
+.bottom-hero {
+
+}
+
+.bottom-hero > button {
+    font-size: 0.512rem;
+    font-family: "Inter";
+    font-weight: 700;
+    color: white;
+    margin: 0 5vw;
+    background: linear-gradient(to right, #3674C2, #463CB5);
+    border: 0px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4vh;
+    height: 7vh;
+    width: calc((250/1920)*100vw);
+}
+
+#right-button {
+    width: calc((200/1920)*100vw)
+}
+
+.bottom-hero > button > svg{
+    fill: white;
+    height: 75%;
+    margin-left: 2%;
+    flex-basis: 33%;
 }
