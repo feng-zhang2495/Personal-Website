@@ -86,7 +86,7 @@ a {
     position: fixed;
     top: 0;
     width: 100vw;
-    background-color: white;
+    background-color: rgba(255,255,255,0.75);
 }
 
 #nav > * {
@@ -153,6 +153,7 @@ a {
     text-align: center;
     height: 100vh;
     padding: 0 calc((320/1920)*100%);
+    background-image: url(assets/images/hero-bg.png);
 }
 
 .top-hero > h2{
