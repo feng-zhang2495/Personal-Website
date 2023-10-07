@@ -91,7 +91,6 @@ a {
 
 #nav > * {
     flex-basis: calc(100%/3);
-    
 }
 
 #nav > .mid > *{
@@ -138,6 +137,7 @@ a {
     width: auto;
     flex-grow: 0;
     cursor: pointer;
+    margin-left: 2vw;
 }
 
 .end > *:hover {
