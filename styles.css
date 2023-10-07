@@ -13,7 +13,7 @@
 }
 
 html {
-    font-size: 6px;
+    font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -23,23 +23,23 @@ h1, h2, h3, h4, h5, h6 {
 
 /* MAJOR THIRD ASPECT RATIO 1.250 */ 
 h1 {
-    font-size: 3.052rem;
+    font-size: 5.653rem;
 }
 
 h2 {
-    font-size: 2.441rem;
+    font-size: 3.998rem;
 }
 
 h3 {
-    font-size: 1.953rem;
+    font-size: 2.827rem;
 }
 
 h4 {
-    font-size: 1.563rem;
+    font-size: 1.999rem;
 }
 
 h5 {
-    font-size: 1.25rem;
+    font-size: 1.414rem;
 }
 
 h6 {
@@ -49,9 +49,9 @@ h6 {
 p {
     font-family: Inter;
     color: #2A2932;
-    font-size: 0.8rem;
+    font-size: 1.3125rem;
     opacity: 0.75;
-    line-height: 1.4rem;
+    line-height: 2rem;
 }
 
 .flexbox {
@@ -90,7 +90,7 @@ a {
 /* NAME */
 .first {
     justify-content: flex-start;
-    font-size: 0.70rem;
+    font-size: 1.4rem;
 }
 
 .first > a {
@@ -108,6 +108,7 @@ a {
 /* MIDDLE LINKS */
 .mid {
     justify-content: center;
+    font-size: 1rem;
 }
 
 .mid > *:hover {
@@ -143,7 +144,7 @@ a {
     padding: 0 calc((320/1920)*100%);
 }
 
-.top-hero > h3{
+.top-hero > h2{
     font-family: "Brandon Grotesque Light";
     background: linear-gradient(to right, #3674C2, #463CB5); 
     -webkit-text-fill-color: transparent; 
@@ -160,7 +161,7 @@ a {
 }
 
 .bottom-hero > button {
-    font-size: 0.512rem;
+    font-size: 0.85rem;
     font-family: "Inter";
     font-weight: 700;
     color: white;
@@ -182,7 +183,7 @@ a {
 
 .bottom-hero > button > svg{
     fill: white;
-    height: 75%;
+    height: 50%;
     margin-left: 2%;
-    flex-basis: 33%;
+    flex-basis: 20%;
 }
