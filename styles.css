@@ -36,6 +36,7 @@ h3 {
 
 h4 {
     font-size: 1.999rem;
+    color: rgba(42, 41, 50, 0.75)
 }
 
 h5 {
@@ -48,9 +49,8 @@ h6 {
 
 p {
     font-family: Inter;
-    color: #2A2932;
+    color: rgba(42, 41, 50, 0.75);
     font-size: 1.3125rem;
-    opacity: 0.75;
     line-height: 2rem;
 }
 
@@ -86,12 +86,11 @@ a {
     position: fixed;
     top: 0;
     width: 100vw;
-    background-color: rgba(255,255,255,0.75);
+    background-color: rgba(255,255,255, 0.8);
 }
 
 #nav > * {
     flex-basis: calc(100%/3);
-    
 }
 
 #nav > .mid > *{
@@ -138,6 +137,7 @@ a {
     width: auto;
     flex-grow: 0;
     cursor: pointer;
+    margin-left: 2vw;
 }
 
 .end > *:hover {
@@ -154,6 +154,7 @@ a {
     height: 100vh;
     padding: 0 calc((320/1920)*100%);
     background-image: url(assets/images/hero-bg.png);
+    background-size: cover;
 }
 
 .top-hero > h2{
@@ -203,7 +204,7 @@ a {
 
 /* ABOUT ME SECTION */
 #about-me {
-    background-color: rgba(42, 41, 50, 0.05);
+    background-color: #f4f4f5;
     padding: 0 calc(320/1980*100%);
     height: 100vh;
     display: flex;
@@ -230,4 +231,43 @@ a {
     height: auto;
     object-fit: cover;
     border-radius: 50%;
+}
+
+
+/* PROJECT SHOWCASE SECTION */
+#project-showcase {
+    padding: 0 calc(320/1980*100%);
+    height:  100vh;
+    flex-direction: column;
+    justify-content: center;
+    display:flex;
+}
+
+.list-of-projects {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8vh;
+}
+
+.list-of-projects > * {
+    flex-basis: calc(90%/3);
+}
+
+.project {
+    flex-direction: column;
+}
+
+.project > img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    opacity: 0.75;
+}
+
+.project > img:hover {
+    transform: scale(1.03);
+    background-image: rgb(0,0,0);
+    cursor: pointer;
+    opacity: 1;
 }
