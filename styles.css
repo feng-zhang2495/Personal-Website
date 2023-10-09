@@ -118,7 +118,7 @@ a {
 /* MIDDLE LINKS */
 .mid {
     justify-content: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .mid > *:hover {
@@ -152,6 +152,7 @@ a {
     justify-content: center;
     text-align: center;
     height: 100vh;
+    min-height: 100vh;
     padding: 0 calc((320/1920)*100%);
     background-image: url(assets/images/hero-bg.png);
     background-size: cover;
@@ -239,7 +240,8 @@ a {
 /* PROJECT SHOWCASE SECTION */
 #project-showcase {
     padding: 0 calc(320/1980*100%);
-    height:  100vh;
+    height: fit-content;
+    padding-block: 4vh;
     flex-direction: column;
     justify-content: center;
     display:flex;
@@ -421,23 +423,144 @@ a {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
+@media (min-width: 768px) { 
     
  }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
+/* Medium devices (tablets, 992px-768px and up) */
+@media (max-width: 992px) { 
+    html {
+        font-size: 15px;
+    }
 
+    .end > img {
+        height: 40%;
+    }
+
+    .hero {
+        padding: 0 8%;
+    }
+
+    #nav {
+        padding: 0 8%;
+    }
+
+    .bottom-hero {
+        width: 80%;
+    }
+
+    .bottom-hero > button {
+        flex-basis: 50%;
+        height: 110%;
+    }
+
+    /* ABOUT ME CSS */
+    .about-me {
+        height: fit-content;
+        padding: 4vh 8vw;
+    }
+
+    .about-me-lower {
+        flex-direction: column-reverse;
+    }
+
+    .about-me-lower-right {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-me > h2 {
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+
+    .about-me-lower-right > img {
+        height: fit-content;
+        width: 50%;
+    }
+
+    .about-me-lower-left > * {
+        text-align: center;
+    }
+
+    /* PROJECT SHOWCASE CSS */
+    #project-showcase {
+        height: auto;
+        margin-block: 4vh;
+        padding: 0 8vw;
+    }
+
+    .list-of-projects {
+        flex-direction: column;
+        margin: 0;
+        padding-bottom: 4vh;
+    }
+    
+    .list-of-projects > * {
+        margin-bottom: 4vh;
+    }
+
+    .last-project {
+        margin-bottom: 0;
+    }
+
+    /* FOOTER CSS */
+    #footer {
+        padding: 2% 8%;
+        height: fit-content;
+    }
  }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
+/* Large devices (desktops, 1200px and up) */
+@media (max-width: 1200px) { 
+    html {
+        font-size: 17px;
+    }
 
- }
+    .end > img {
+        height: 40%;
+    }
 
-/* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
+    .hero {
+        padding: 0 8%;
+    }
 
+    #nav {
+        padding: 0 8%;
+    }
+
+    .bottom-hero {
+        width: 80%;
+    }
+
+    .bottom-hero > button {
+        flex-basis: 50%;
+        height: 110%;
+    }
+
+    /* ABOUT ME CSS */
+    .about-me {
+        height: fit-content;
+        padding: 4vh 8vw;
+    }
+
+
+    /* PROJECT SHOWCASE CSS */
+    #project-showcase {
+        height: auto;
+        margin-block: 4vh;
+        padding: 0 8vw;
+    }
+
+    .list-of-projects {
+        margin-top: 4vh;
+    }
+
+    /* FOOTER CSS */
+    #footer {
+        padding: 2% 8%;
+        height: fit-content;
+    }
  }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
