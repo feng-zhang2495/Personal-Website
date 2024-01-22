@@ -43,7 +43,6 @@ small {font-size: 0.707rem; /* 11.36px */}
   position: fixed;
   top: 0;
   width: 100vw;
-  border-bottom: 0.5px solid #21238e;
 }
 
 nav ul > *:hover {
@@ -65,12 +64,10 @@ nav ul > *:hover {
 
 .hero {
   background: linear-gradient(to bottom, #080815 25%, #21238e 150%);
-  z-index: 7;
 }
 
 .projects {
-  background-color: #17185d;
-  border-top: #9A9CE1 1px solid;
+  background: linear-gradient(to bottom, #17185d 20%, #080815 100%);
 }
 
 .project-card {
