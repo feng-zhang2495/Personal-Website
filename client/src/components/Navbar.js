@@ -10,7 +10,7 @@ const Navbar = (props) => {
     const page = useContext(pageContext)
 
     return (
-        <div className='navbar flex flex-row justify-between xl:px-32 py-5 lg:px-20 sm:px-12 items-center'>
+        <div className='navbar flex flex-row justify-between xl:px-32 py-5 lg:px-20 sm:px-12 items-center bg-transparent'>
             <header className='inline w-1/5 text-left'>
                 <h1 className='text-xl whitespace-nowrap inline hover:scale-105 hover:cursor-pointer'>Feng Zhang</h1>
             </header>
