@@ -50,7 +50,8 @@ nav ul > *:hover {
   cursor: pointer;
   transform: scale(1.1);
   color: #9A9CE1;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
+  transform-origin: center;
 }
 
 .gradient-text {
@@ -64,32 +65,16 @@ nav ul > *:hover {
 
 .hero {
   background: linear-gradient(to bottom, #080815 25%, #21238e 150%);
+  z-index: 7;
 }
-
-/* WAVES */
-.custom-shape-divider-top-1705915278 {
-  bottom: -8vh;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  position: absolute;
-}
-
-.custom-shape-divider-top-1705915278 svg {
-  position: relative;
-  display: block;
-  width: calc(135% + 1.3px);
-  height: 78px;
-}
-
-.custom-shape-divider-top-1705915278 .shape-fill {
-  fill: #0C0C27;
-}
-/* END OF WAVES */
 
 .projects {
-  background-color: #9A9CE1;
+  background-color: #17185d;
+  border-top: #9A9CE1 1px solid;
+}
+
+.project-card {
+  background-color: #21238e;
 }
 
 @keyframes color {
