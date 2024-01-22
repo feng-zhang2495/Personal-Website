@@ -21,7 +21,10 @@ h1, h2, h3, h4, h5 {
   font-weight: 700;
 }
 
-html {font-size: 100%;} /* 16px */
+html {
+  font-size: 100%;
+  overflow-x: hidden;
+} /* 16px */
 
 h1 {font-size: 5.652rem; /* 90.4px */}
 
@@ -61,6 +64,32 @@ nav ul > *:hover {
 
 .hero {
   background: linear-gradient(to bottom, #080815 25%, #21238e 150%);
+}
+
+/* WAVES */
+.custom-shape-divider-top-1705915278 {
+  bottom: -8vh;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  position: absolute;
+}
+
+.custom-shape-divider-top-1705915278 svg {
+  position: relative;
+  display: block;
+  width: calc(135% + 1.3px);
+  height: 78px;
+}
+
+.custom-shape-divider-top-1705915278 .shape-fill {
+  fill: #0C0C27;
+}
+/* END OF WAVES */
+
+.projects {
+  background-color: #9A9CE1;
 }
 
 @keyframes color {
