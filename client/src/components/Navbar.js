@@ -10,7 +10,7 @@ const Navbar = (props) => {
     const page = useContext(pageContext)
 
     return (
-        <div className='navbar flex flex-row justify-between xl:px-32 py-5 lg:px-20 sm:px-12 items-center bg-transparent'>
+        <div className='navbar flex flex-row justify-between xl:px-32 py-5 lg:px-20 sm:px-12 items-center bg-transparent z-10'>
             <nav className='center-nav basis-full flex items-center justify-start'>
                 <ul className='inline-flex flex-row grow w- justify-start gap-x-12 text-lg items-center font-bold'>
                     <li className='inline'>Home</li>

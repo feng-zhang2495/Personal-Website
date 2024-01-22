@@ -75,6 +75,15 @@ nav ul > *:hover {
 
 .project-card {
   background-color: #21238e;
+  flex-basis: 45%;
+}
+
+.repo-button {
+  background-color: #17185d;
+  transition-duration: 0.2s;
+}
+.repo-button:hover {
+  background-color: #080815;
 }
 
 @keyframes color {
