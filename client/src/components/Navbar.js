@@ -1,26 +1,32 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { pageContext } from '../App'
 
 
+const Navbar = (props) => {
+    const page = useContext(pageContext)
 
-const Navbar = () => {
     return (
-        <div className='navbar flex flex-row justify-between px-32 py-5'>
-            <header className='inline grow w-1/3 text-left'>
-                <h1 className='text-xl inline'>Feng Zhang</h1>
+        <div className='navbar flex flex-row justify-between xl:px-32 py-5 lg:px-20 sm:px-12 items-center'>
+            <header className='inline w-1/5 text-left'>
+                <h1 className='text-xl whitespace-nowrap inline hover:scale-105 hover:cursor-pointer'>Feng Zhang</h1>
             </header>
             
-            <nav className='center-nav'>
-                <ul className='inline-flex flex-row grow w-1/3 justify-center gap-x-6 text-xl'>
+            <nav className='center-nav basis-full flex items-center justify-center'>
+                <ul className='inline-flex flex-row grow w- justify-center gap-x-12 text-lg items-center font-bold'>
                     <li className='inline'>Home</li>
                     <li className='inline'>Projects</li>
+                    <li className='inline'>Blog</li>
+                    <li className='inline'>Contact Me</li>
                 </ul>
             </nav>
             
-            <div className='socials grow w-1/3 flex flex-row justify-end gap-x-6'>
-                <FontAwesomeIcon icon={faGithub} size='2x' inverse/>
-                <FontAwesomeIcon icon={faLinkedin} size='2x' inverse/>
+            <div className='socials w-1/5 flex flex-row justify-end gap-x-6'>
+                <Link to='https://github.com/fengzhang789' className='hover:scale-105'><FontAwesomeIcon icon={faGithub} size='2x' inverse/></Link>
+                <Link to='https://www.linkedin.com/in/yunfengzhang/' className='hover:scale-105'><FontAwesomeIcon icon={faLinkedin} size='2x' inverse/></Link>
             </div>
         </div>
     )
