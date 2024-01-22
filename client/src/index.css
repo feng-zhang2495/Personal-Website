@@ -51,13 +51,22 @@ nav ul > *:hover {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #9A9CE1, #4448DF);
+  --bg-size: 400%;
+  background: linear-gradient(to left, #9A9CE1, #4448DF, #9A9CE1);
   -webkit-background-clip: text;
   color: transparent;
+  background-size: 200% 100%;
+  animation: color 10s linear infinite;
 }
 
 .hero {
   background: linear-gradient(to bottom, #080815 25%, #21238e 150%);
+}
+
+@keyframes color {
+  to {
+    background-position: var(--bg-size) 0;
+  }
 }
 
 @media screen and (max-width: 576px) {
