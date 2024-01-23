@@ -44,9 +44,9 @@ const Projects = () => {
     return (
         <section className='projects w-screen'>
             <div className='px-32 py-12'>
-                <h2 className='text-center py-6'>Projects</h2>
+                <h2 data-aos="zoom-in" className='text-center py-6'>Projects</h2>
                 
-                <article className='project-card-holder flex flex-row gap-16 flex-wrap justify-evenly'>
+                <article className='project-card-holder flex flex-row gap-16 flex-wrap justify-stretch items-stretch'>
                     {data.map((obj) => {
                         return <ProjectCard title={obj.title} desc={obj.desc} subtitle={obj.subtitle} img={obj.img} icons={obj.icons} github={obj.github}></ProjectCard>
                     })}

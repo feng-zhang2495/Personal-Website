@@ -13,10 +13,10 @@ const Navbar = (props) => {
         <div className='navbar flex flex-row justify-between xl:px-32 py-5 lg:px-20 sm:px-12 items-center bg-transparent z-10 opacity-90'>
             <nav className='center-nav basis-full flex items-center justify-start'>
                 <ul className='inline-flex flex-row grow w- justify-start gap-x-12 text-lg items-center font-bold'>
-                    <li className='inline'>Home</li>
-                    <li className='inline'>Projects</li>
-                    <li className='inline'>Blog</li>
-                    <li className='inline'>Contact Me</li>
+                    <Link to="/"><li className='inline'>Home</li></Link>
+                    <Link to="/"><li className='inline'>Projects</li></Link>
+                    <Link to="/blog"><li className='inline'>Blog</li></Link>
+                    <Link to="/"><li className='inline'>Contact Me</li></Link>
                 </ul>
             </nav>
             

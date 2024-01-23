@@ -6,7 +6,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const ProjectCard = ({ title, subtitle, desc, img, github, website, icons}) => {
     return (
-        <section className='project-card my-8 py-8 px-12 rounded-2xl hover:scale-105 duration-300 flex flex-col justify-between'>
+        <section data-aos="fade-up-right" className='project-card my-8 py-8 px-12 rounded-2xl hover:scale-105 duration-300 flex flex-col justify-between'>
             <div className='top'>
                 <h4>{title}</h4>
                 <h6 className='pb-6 font-bold opacity-70'>{subtitle}</h6>

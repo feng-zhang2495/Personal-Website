@@ -1,7 +1,9 @@
 import Navbar from './components/Navbar';
-import { createContext, useState } from 'react';
+import { createContext, useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
 export const pageContext = createContext("myworld")
 
@@ -11,6 +13,15 @@ function App() {
     setCurrentPage(value)
   }
 
+  useEffect(() => {
+    AOS.init({
+      duration: 600,
+      easing: 'ease-out',
+      once: false,
+      mirror: false,
+    });
+  }, [])
+
   return (
     <div className="App">
       <pageContext.Provider value={currentPage}>
@@ -18,7 +29,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} ></Route>
         </Routes>
-
       </pageContext.Provider>
     </div>
   );
