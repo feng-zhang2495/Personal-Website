@@ -15,8 +15,8 @@ const ProjectCard = ({ title, subtitle, desc, img, github, website, icons}) => {
                 
                 {icons && (
                     <div className='technologies flex flex-row pt-6 items-center gap-3'>
-                        {icons.map((icon) => {
-                            return <FontAwesomeIcon icon={icon} size='2xl' inverse/>
+                        {icons.map((icon, index) => {
+                            return <FontAwesomeIcon key={index} icon={icon} size='2xl' inverse/>
                         })}
                     </div>
                 )}
@@ -26,13 +26,13 @@ const ProjectCard = ({ title, subtitle, desc, img, github, website, icons}) => {
                 {(github || website) && (
                     <div className='project-links pt-6'>
                         {github && (
-                            <Link target="_blank" to={github} className='inline-flex flex-row gap-2 items-center repo-button px-6 py-2 rounded-full'>
+                            <Link target="_blank" key={github} to={github} className='inline-flex flex-row gap-2 items-center repo-button px-6 py-2 rounded-full'>
                                 <button className=''>Github</button>
                                 <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
                             </Link>
                         )}
                         {website && (
-                            <Link target="_blank" to={github} className='inline-flex flex-row gap-2 items-center repo-button px-6 py-2 rounded-full'>
+                            <Link target="_blank" key={website} to={website} className='inline-flex flex-row gap-2 items-center repo-button px-6 py-2 rounded-full'>
                                 <button className=''>Website</button>
                                 <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
                             </Link>

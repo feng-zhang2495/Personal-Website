@@ -48,7 +48,7 @@ const Projects = () => {
                 
                 <article className='project-card-holder flex flex-row gap-16 flex-wrap justify-stretch items-stretch'>
                     {data.map((obj) => {
-                        return <ProjectCard title={obj.title} desc={obj.desc} subtitle={obj.subtitle} img={obj.img} icons={obj.icons} github={obj.github}></ProjectCard>
+                        return <ProjectCard key={obj.subtitle} title={obj.title} desc={obj.desc} subtitle={obj.subtitle} img={obj.img} icons={obj.icons} github={obj.github}></ProjectCard>
                     })}
                 </article>
             </div>

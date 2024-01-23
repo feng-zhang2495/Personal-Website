@@ -1,11 +1,14 @@
 import React from 'react'
 import feng from '../assets/img/feng.JPG'
+import Stars from './Stars'
+import foreground from '../assets/img/foreground.svg'
 
 const Hero = () => {
     return (
         <>
-            <main className='hero h-screen w-screen'>
-                <div className='flex flex-row pt-44 px-32 justify-between'>
+            <main className='hero w-screen'>
+                <Stars />
+                <div className='flex flex-row pt-44 px-32 justify-between z-20 relative'>
                     <div className='left-hero basis-3/6 flex flex-col items-start'>
                         <h1 className='gradient-text' data-aos="fade-right">Feng Zhang</h1>
                         <h3 className='typewriter pt-8' data-aos="fade-right" data-aos-delay="1000">Software Engineer</h3>
@@ -15,6 +18,7 @@ const Hero = () => {
                         <img data-aos="fade-zoom-in" data-aos-offset="200" src={feng} alt='feng headshot at e7' className='w-fit h-fit aspect-square max-h-80 rounded-full object-cover'></img>
                     </div>
                 </div>
+                <img src={foreground} data-aos="fade-in" className='foreground w-full relative z-10 max-h-screen object-cover' alt='tree foreground'></img>
             </main>
         </>
     )
