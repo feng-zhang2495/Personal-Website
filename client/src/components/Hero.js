@@ -7,9 +7,9 @@ import { useState, useEffect } from 'react'
 
 const Hero = () => {
     const [stars, setStars] = useState(data);
+    const [tree, setTree] = useState({})
     const moveFactorY = 3;
     const moveFactorX = 3;
-    // console.log(`Window height: ${window.innerHeight}`)
     
 
     useEffect(() => {

@@ -118,7 +118,8 @@ nav ul > *:hover {
 
 .foreground {
   /* filter: invert(4%) sepia(5%) saturate(7202%) hue-rotate(203deg) brightness(97%) contrast(101%); */
-  bottom: 50vh;
+  bottom: 60vh;
+  overflow: visible;
 }
 
 @keyframes moveStar {
