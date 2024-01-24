@@ -130,6 +130,51 @@ nav ul > *:hover {
   }
 }
 
+.carousel-row {
+  animation: slide 15s infinite linear;
+  white-space: nowrap;
+  width: max-content;
+  position: relative;
+}
+
+.carousel-row:hover {
+  animation-play-state: paused;
+}
+
+.infinite-carousel {
+  position: relative;
+}
+
+.infinite-carousel:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20vw;
+  background: linear-gradient(to left, rgba(8, 8, 21, 0), #080815);
+  z-index: 2;
+  content: "";
+}
+
+.infinite-carousel:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 20vw;
+  background: linear-gradient(to right, rgba(8, 8, 21, 0), #080815);
+  z-index: 2;
+  content: "";
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  } to {
+    transform: translateX(-50%);
+  }
+}
+
 @keyframes color {
   to {
     background-position: var(--bg-size) 0;

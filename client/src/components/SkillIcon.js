@@ -1,8 +1,8 @@
 import React from 'react'
 
-const SkillIcon = () => {
+const SkillIcon = ({ data }) => {
     return (
-        <div>SkillIcon</div>
+        <img data-aos="fade-in" data-aos-duration="1000" className='logo h-24 inline-block mx-16' src={data.img} alt='Carousel of technology skill' style={data.styles}></img>
     )
 }
 
