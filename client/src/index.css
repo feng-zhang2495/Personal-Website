@@ -68,8 +68,9 @@ nav ul > *:hover {
 
 .hero {
   background: linear-gradient(to bottom, #080815 25%, #21238e 150%);
-  height: 120vh;
+  max-height: 660px;
 }
+
 
 .projects {
   background: linear-gradient(to bottom, #17185d 20%, #080815 100%);
@@ -111,11 +112,7 @@ nav ul > *:hover {
   animation: moveStar 5s infinite alternate;
 }
 
-.foreground {
-  /* filter: invert(4%) sepia(5%) saturate(7202%) hue-rotate(203deg) brightness(97%) contrast(101%); */
-  bottom: 60vh;
-  overflow: visible;
-}
+
 
 .footer {
   background-color: #141420;
@@ -181,32 +178,41 @@ nav ul > *:hover {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 576px) {
   html {
-    font-size: 12px;
+    font-size: 10px;
+  }
+  .foreground {
+    bottom: 0;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   html {
     font-size: 13px;
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 992px) {
   html {
     font-size: 14px;
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
   html {
     font-size: 15px;
   }
+  .foreground {
+    bottom: 30vh;
+  }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (min-width: 1400px) {
   html {
     font-size: 15px;
+  }
+  .foreground {
+    bottom: 55vh;
   }
 }

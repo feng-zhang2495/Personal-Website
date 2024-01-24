@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react'
 
 const Hero = () => {
     const [stars, setStars] = useState(data);
-    const [tree, setTree] = useState({})
     const moveFactorY = 3;
     const moveFactorX = 3;
     
@@ -27,7 +26,6 @@ const Hero = () => {
                     top: `${newTop}%`
                 }
             }))
-            // setMousePosition({ x: event.clientX, y: event.clientY });
         };
       
           window.addEventListener('mousemove', handleMouseMove);
@@ -39,19 +37,21 @@ const Hero = () => {
 
     return (
         <>
-            <main className='hero w-screen'>
+            <main className='hero w-screen h-screen relative'>
                 <Stars stars={stars} />
-                <div className='flex flex-row pt-44 px-32 justify-between z-20 relative'>
-                    <div className='left-hero basis-3/6 flex flex-col items-start'>
-                        <h1 className='gradient-text' data-aos="fade-right">Feng Zhang</h1>
-                        <h3 className='typewriter pt-8' data-aos="fade-right" data-aos-delay="1000">Software Engineer</h3>
-                        <h5 className='text-lg pt-4' data-aos="fade-right" data-aos-delay="2000">Hello, I'm a first year CS student at the University of Waterloo. I'm passionate about all things surrounding web development and Machine Learning, and I am constantly looking for new opportunities to improve my skills!</h5>
+                <div className='flex flex-col pt-20 items-center justify-center lg:flex-row lg:pt-44 lg:px-32 lg:justify-between z-20 relative px-6'>
+                    <div className='left-hero basis-3/6 flex flex-col items-center lg:items-start'>
+                        <h1 className='gradient-text text-3xl pb-6' data-aos="fade-right">Feng Zhang</h1>
+                        <img data-aos="fade-zoom-in" data-aos-offset="200" src={feng} alt='feng headshot at e7' className='w-1/2 h-fit aspect-square max-h-80 rounded-full object-cover'></img>
+                        <h3 className='typewriter text-center text-2xl pt-8' data-aos="fade-right" data-aos-delay="1000">Software Engineer</h3>
+                        <h5 className='text-base pt-4 text-center' data-aos="fade-right" data-aos-delay="2000">Hello, I'm a first year CS student at the University of Waterloo. I'm passionate about all things surrounding web development and Machine Learning, and I am constantly looking for new opportunities to improve my skills!</h5>
                     </div>
-                    <div className='right-hero basis-2/6 flex justify-center items-center'>
+                    {/* <div className='right-hero basis-2/6 flex justify-center items-center'>
                         <img data-aos="fade-zoom-in" data-aos-offset="200" src={feng} alt='feng headshot at e7' className='w-fit h-fit aspect-square max-h-80 rounded-full object-cover'></img>
-                    </div>
+                    </div> */}
                 </div>
-                <img src={foreground} data-aos="fade-in" className='foreground w-full relative z-10 max-h-screen object-cover' alt='tree foreground'></img>
+                <img className='foreground w-full absolute z-10 max-h-screen object-cover top-2/3
+                                ' src={foreground} data-aos="fade-in" alt='tree foreground'></img>
             </main>
         </>
     )
