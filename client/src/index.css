@@ -26,6 +26,10 @@ html {
   overflow-x: hidden;
 } /* 16px */
 
+.main-bg {
+  background-color: #080815;
+}
+
 h1 {font-size: 5.652rem; /* 90.4px */}
 
 h2 {font-size: 3.997rem; /* 64px */}
@@ -65,15 +69,6 @@ nav ul > *:hover {
 .hero {
   background: linear-gradient(to bottom, #080815 25%, #21238e 150%);
   height: 120vh;
-}
-
-@keyframes moveGradient {
-  0%, 100% {
-      background-position: 0% 0%;
-  }
-  50% {
-      background-position: 200% 200%;
-  }
 }
 
 .projects {
@@ -120,6 +115,10 @@ nav ul > *:hover {
   /* filter: invert(4%) sepia(5%) saturate(7202%) hue-rotate(203deg) brightness(97%) contrast(101%); */
   bottom: 60vh;
   overflow: visible;
+}
+
+.footer {
+  background-color: #141420;
 }
 
 @keyframes moveStar {

@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
+import Footer from './components/Footer';
 
 export const pageContext = createContext("myworld")
 
@@ -29,6 +30,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} ></Route>
         </Routes>
+        <Footer />
       </pageContext.Provider>
     </div>
   );
