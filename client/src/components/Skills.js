@@ -11,6 +11,9 @@ import python from '../assets/img/python.png'
 import react from '../assets/img/react.png'
 import tensorflow from '../assets/img/tensorflow.png'
 import SkillIcon from './SkillIcon'
+import html from '../assets/img/html.png'
+import css from '../assets/img/css.png'
+import tailwind from '../assets/img/tailwind.png'
 
 const data = [
     {
@@ -48,6 +51,15 @@ const data = [
     },
     {
         img: tensorflow,
+    },
+    {
+        img: html,
+    },
+    {
+        img: css,
+    },
+    {
+        img: tailwind,
     },
 ]
 

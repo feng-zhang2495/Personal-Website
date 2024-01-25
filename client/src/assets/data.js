@@ -18,8 +18,8 @@ const stars = Array.from({ length: 400 }, (_, index) => {
 
     const style = {
         backgroundColor: getRandomColor(),
-        left: `${Math.random() * 140 - 40}%`,
-        top: `${Math.random() * 140 - 40}%`,
+        left: `${Math.random() * 130 - 40}%`,
+        top: `${Math.random() * 130 - 40}%`,
         width: `${generateSize()}px`,
         height: `${generateSize()}px`,
     };

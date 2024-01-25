@@ -6,17 +6,20 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const ProjectCard = ({ title, subtitle, desc, img, github, website, icons}) => {
     return (
-        <section data-aos="fade-up-right" className='project-card my-8 py-8 px-12 rounded-2xl hover:scale-105 duration-300 flex flex-col justify-between'>
+        <section className='project-card my-8 py-4 px-6 rounded-2xl flex flex-col justify-between
+                            sm:py-8 px-10
+                            xl:' data-aos="fade-up-right">
             <div className='top'>
-                <h4>{title}</h4>
-                <h6 className='pb-6 font-bold opacity-70'>{subtitle}</h6>
-                <img src={img} alt='project demo' className='object-cover w-full rounded-lg max-h-80'></img>
-                <p className='pt-6 opacity-70'>{desc}</p> 
+                <h4 className=''>{title}</h4>
+                <h6 className='pb-6 font-bold opacity-70
+                               xl:text-lg 2xl:text-xl'>{subtitle}</h6>
+                <img className='object-cover w-full rounded-lg max-h-80' src={img} alt='project demo'></img>
+                <p className='pt-6 opacity-70 xl:text-lg 2xl"text-xl'>{desc}</p> 
                 
                 {icons && (
-                    <div className='technologies flex flex-row pt-6 items-center gap-3'>
+                    <div className='technologies flex flex-row pt-6 items-center gap-3 flex-wrap'>
                         {icons.map((icon, index) => {
-                            return <FontAwesomeIcon key={index} icon={icon} size='2xl' inverse/>
+                            return <img key={index} src={icon} className='h-8' alt='icon of technology used'></img>
                         })}
                     </div>
                 )}

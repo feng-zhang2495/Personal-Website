@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import { createContext, useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import NotFound from './pages/NotFound';
 import Home from './pages/Home'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
@@ -29,6 +30,7 @@ function App() {
         <Navbar context={pageContext}/>
         <Routes>
           <Route path='/' element={<Home />} ></Route>
+          <Route path='*' element={<NotFound />}></Route>
         </Routes>
         <Footer />
       </pageContext.Provider>

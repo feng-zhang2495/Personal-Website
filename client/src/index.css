@@ -3,12 +3,13 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
+*, *:before, *:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Noto Sans", sans-serif;
   color: #EDEEF7;
+  border: 0;
 }
 
 body {
@@ -68,7 +69,7 @@ nav ul > *:hover {
 
 .hero {
   background: linear-gradient(to bottom, #080815 25%, #21238e 150%);
-  max-height: 660px;
+  
 }
 
 
@@ -151,6 +152,7 @@ nav ul > *:hover {
   background: linear-gradient(to left, rgba(8, 8, 21, 0), #080815);
   z-index: 2;
   content: "";
+  border-color: none;
 }
 
 .infinite-carousel:after {
@@ -162,6 +164,7 @@ nav ul > *:hover {
   background: linear-gradient(to right, rgba(8, 8, 21, 0), #080815);
   z-index: 2;
   content: "";
+  border-color: none;
 }
 
 @keyframes slide {
@@ -179,40 +182,43 @@ nav ul > *:hover {
 }
 
 @media screen and (min-width: 576px) {
-  html {
-    font-size: 10px;
-  }
-  .foreground {
-    bottom: 0;
-  }
+
 }
 
 @media screen and (min-width: 768px) {
-  html {
-    font-size: 13px;
-  }
+
 }
 
-@media screen and (min-width: 992px) {
-  html {
-    font-size: 14px;
+@media screen and (min-width: 1024px) {
+  .hero-content {
+    display: grid;
+    grid-template-areas: 
+      "heading heading heading heading heading img img img"
+      "subheading subheading subheading subheading subheading img img img"
+      "paragraph paragraph paragraph paragraph paragraph img img img";
+  }
+
+  .gradient-text {
+    grid-area: heading;
+  }
+
+  .personal-photo {
+    grid-area: img;
+  }
+
+  .typewriter {
+    grid-area: subheading;
+  }
+
+  .paragraph {
+    grid-area: paragraph;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  html {
-    font-size: 15px;
-  }
-  .foreground {
-    bottom: 30vh;
-  }
+
 }
 
 @media screen and (min-width: 1400px) {
-  html {
-    font-size: 15px;
-  }
-  .foreground {
-    bottom: 55vh;
-  }
+
 }
