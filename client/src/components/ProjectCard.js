@@ -8,7 +8,7 @@ const ProjectCard = ({ title, subtitle, desc, img, github, website, icons}) => {
     return (
         <section className='project-card my-8 py-4 px-6 rounded-2xl flex flex-col justify-between
                             sm:py-8 px-10
-                            xl:' data-aos="fade-up-right">
+                            2xl:px-16 2xl:py-12' data-aos="fade-up-right">
             <div className='top'>
                 <h4 className=''>{title}</h4>
                 <h6 className='pb-6 font-bold opacity-70
