@@ -44,7 +44,7 @@ const Hero = () => {
                                 sm:px-16
                                 xl:px-32 xl:h-full'>
                     <div className='hero-content basis-3/6 flex flex-col items-center
-                                    lg:grid lg:grid-cols-8 lg:pb-44'>
+                                    lg:grid lg:grid-cols-8 lg:h-full'>
                         <h1 className='gradient-text text-3xl pb-6
                                         sm:text-4xl
                                         xl:text-5xl' data-aos="fade-right">Feng Zhang</h1>
