@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  color: #EDEEF7;
+  border: 0;
+}
+
+body {
+  font-family: 'Noto Sans';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Noto Sans';
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%;
+  overflow-x: hidden;
+} /* 16px */
+
+.main-bg {
+  background-color: #080815;
+}
+
+h1 {font-size: 5.652rem; /* 90.4px */}
+
+h2 {font-size: 3.997rem; /* 64px */}
+
+h3 {font-size: 2.827rem; /* 45.28px */}
+
+h4 {font-size: 1.999rem; /* 32px */}
+
+h5 {font-size: 1.414rem; /* 22.56px */}
+
+small {font-size: 0.707rem; /* 11.36px */}
+
+.navbar {
+  background-color: #080815;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+nav ul > *:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: #9A9CE1;
+  transition-duration: 0.2s;
+  transform-origin: center;
+}
+
+.gradient-text {
+  --bg-size: 400%;
+  background: linear-gradient(to left, #9A9CE1, #4448DF, #9A9CE1);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  animation: color 10s linear infinite;
+}
+
+.hero {
+  background: linear-gradient(to bottom, #080815 25%, #21238e 150%);
+  
+}
+
+
+.projects {
+  background: linear-gradient(to bottom, #17185d 20%, #080815 100%);
+}
+
+.project-card {
+  background-color: #21238e;
+  flex-basis: 45%;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.repo-button {
+  background-color: #17185d;
+  transition-duration: 0.2s;
+}
+.repo-button:hover {
+  background-color: #080815;
+}
+
+
+/* STARS */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  transform-origin: center;
+  animation: moveStar 5s infinite alternate;
+}
+
+
+
+.footer {
+  background-color: #141420;
+}
+
+@keyframes moveStar {
+  0% {
+      transform: translate(-5px, -5px);
+  }
+  100% {
+      transform: translate(5px, 5px);
+  }
+}
+
+.carousel-row {
+  animation: slide 15s infinite linear;
+  white-space: nowrap;
+  width: max-content;
+  position: relative;
+}
+
+.carousel-row:hover {
+  animation-play-state: paused;
+}
+
+.infinite-carousel {
+  position: relative;
+}
+
+.infinite-carousel:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20vw;
+  background: linear-gradient(to left, rgba(8, 8, 21, 0), #080815);
+  z-index: 2;
+  content: "";
+  border-color: none;
+}
+
+.infinite-carousel:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 20vw;
+  background: linear-gradient(to right, rgba(8, 8, 21, 0), #080815);
+  z-index: 2;
+  content: "";
+  border-color: none;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  } to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes color {
+  to {
+    background-position: var(--bg-size) 0;
+  }
+}
+
+@media screen and (min-width: 576px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-content {
+    display: grid;
+    grid-template-areas: 
+      "heading heading heading heading heading img img img"
+      "subheading subheading subheading subheading subheading img img img"
+      "paragraph paragraph paragraph paragraph paragraph img img img";
+  }
+
+  .gradient-text {
+    grid-area: heading;
+  }
+
+  .personal-photo {
+    grid-area: img;
+  }
+
+  .typewriter {
+    grid-area: subheading;
+  }
+
+  .paragraph {
+    grid-area: paragraph;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+}
+
+@media screen and (min-width: 1400px) {
+
+}
